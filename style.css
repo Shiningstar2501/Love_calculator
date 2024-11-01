@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #ffb6c1; /* Light pink background */
+    color: #fff;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: justify;
+    height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 2px;
+    z-index: 1; /* Ensure it's on top */
+    position: relative; /* Position relative for z-index to take effect */
+    margin:auto;
+    padding: 0px;
+}
+
+.heart {
+    position: relative;
+    width: 300px; /* Increased width */
+    height: 300px; /* Increased height */
+    background-color: #ff0000; /* Bright red heart */
+    transform: rotate(-45deg); /* Rotate the heart */
+    margin-bottom: 20px; /* Space below heart */
+}
+
+.heart::before,
+.heart::after {
+    content: '';
+    position: absolute;
+    width: 300px; /* Match width of the heart */
+    height: 300px; /* Match height of the heart */
+    background-color: #ff0000; /* Bright red color */
+    border-radius: 150px; /* Half of the width and height for curves */
+}
+
+.heart::before {
+    top: -150px; /* Position top half of the heart */
+    left: 0;
+}
+
+.heart::after {
+    left: 150px; /* Position right half of the heart */
+    top: 0;
+}
+
+.box {
+    position: absolute; /* Positioning inside the heart */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centering the form */
+    width: 90%; /* Box width */
+    text-align: center; /* Center text inside box */
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.2); /* Slightly transparent background */
+    border-radius: 15px; /* Rounded corners for the box */
+    z-index: 1; /* Ensure it sits above the heart */
+}
+
+input {
+    width: 90%; /* Input width */
+    padding: 10px; /* Padding for input */
+    margin: 10px 0; /* Spacing between inputs */
+    border-radius: 5px; /* Rounded corners */
+    border: 1px solid #fff; /* White border */
+    background-color: rgba(255, 255, 255, 0.5); /* Slightly transparent background for inputs */
+    color: #000; /* Black text for input */
+}
+
+.btn {
+    margin: 20px 0;
+    padding: 10px 15px;
+    border-radius: 25px;
+    border: none;
+    background-color: #ff4f4f; /* Lighter red button */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #ff1a1a;
+}
+
+#hello {
+    color: #00ffff; /* Aqua color for love percentage */
+    font-size: 20px;
+    font-family: 'Lucida Sans';
+    margin-top: 20px;
+}
